@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="index.css">
+    <nav>
+        <div class="logo"><a href="index.html"><img src="./focus_logo.png" alt="logo"></a></div>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./books.html">Books</a></li>
+            <li><a href="./anime.html">Anime</a></li>
+            <li><a href="./movies.html">Movies</a></li>
+            <li><a href="./series.Html">Series</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+        </ul>
+        <div class="search">
+            <input type="search" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="menu-button">☰</div><!-- placeholder for menu button -->
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.menu-button');
+            const nav = document.querySelector('nav');
+            const navU1 = document.querySelector('nav ul');
+
+            menuButton.addEventListener('click', function () {
+                nav.classList.toggle('active');
+                navU1.classList.toggle('visible');
+            });
+        });
+         // Add event listener for screen resize
+  window.addEventListener('resize', function() {
+    const nav = document.querySelector('nav');
+    if (window.innerWidth > 1000) {
+      nav.classList.remove('active');
+      document.querySelector('nav ul').classList.remove('visible');
+    }
+  });
+    </script>
+ 
+</head>
+<body>
+    
+</body>
+</html>

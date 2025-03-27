@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* I wanted to make the bg-c cover the whole page*/
+    background-color: rgb(91, 6, 194); /* Background color of the nav bar */
+}
+
+.logo{
+    width: 70%; /* Set the desired width of the container */
+    max-width: 200px;
+    display: flex;
+    justify-content: left;
+    flex: 0 1 auto; /* Allow the logo to shrink but not too small */
+}
+
+.logo img{
+        width: 70%; /* Make the image fill the container width */
+        height: auto; /* Maintain aspect ratio */
+}
+
+
+nav ul{
+    list-style-type: none; /* Remove bullet points */
+    display: flex;         /* Make the list horizontal */
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    justify-content: center; /* Center the navigation items */
+    flex: 1;
+    overflow: hidden;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+nav ul li a:hover{
+    color:azure;
+}
+
+.search{
+    align-items: center;
+    display:flex;
+    max-width: 300px;
+}
+
+.search input[type="search"]{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+    height: 30px;
+    outline: none;
+    margin: 0;
+}
+
+.search button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: grey;
+    color: white;
+    border: 2px solid #ccc;
+    border-left: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners for right side */
+    cursor: pointer;
+    margin: 0;
+    height: 30px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.search button:hover {
+    background-color: black;
+}
+
+.menu-button{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .search {
+        display: none; /* Hide the search bar */
+
+    }
+    .menu-button {
+        display: block; /* Show the menu button */
+        position: absolute;
+        right: 1rem;
+        color: black;
+    }
+nav.active{
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 0; /* Full width */
+    right: 0 ; /* Full width */
+    background-color:  rgb(91, 6, 194);
+    padding: 1rem;
+    width: 100%; /* Ensure full width */
+}
+nav.active ul.visible{
+    display: flex;
+}
+nav ul{
+    display: none;
+    flex-direction: column;
+}
+    .logo img {
+        max-width: 500px; /* Optionally set a smaller max-width for smaller screens */
+        width: 200px;
+        margin: 5px;
+}
+
+nav.active ul{
+    display: flex;
+    background-color: rgb(91, 6, 194);
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+nav.active ul li{
+    margin: 10px 0;
+    justify-content: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
