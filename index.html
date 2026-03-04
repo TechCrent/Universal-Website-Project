@@ -2,12 +2,411 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Universal Website Project</title>
+    <title>Universal Digital Hub - Your Gateway to Entertainment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">UDH</a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#home"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#movies"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Movies</a
+              >
+              <a
+                href="#series"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Series</a
+              >
+              <a
+                href="#books"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Books</a
+              >
+              <a
+                href="#anime"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Anime</a
+              >
+              <a
+                href="#about"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#contact"
+                class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              class="text-gray-900 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              id="mobile-menu-button"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Home</a
+          >
+          <a
+            href="#movies"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Movies</a
+          >
+          <a
+            href="#series"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Series</a
+          >
+          <a
+            href="#books"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Books</a
+          >
+          <a
+            href="#anime"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Anime</a
+          >
+          <a
+            href="#about"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Welcome to Universal Digital Hub
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Your one-stop destination for movies, series, books, anime, and
+            more. Discover, explore, and immerse yourself in the world of
+            digital entertainment.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#movies"
+              class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
+              >Explore Movies</a
+            >
+            <a
+              href="#series"
+              class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300"
+              >Watch Series</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Explore Our Categories
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Movies -->
+          <div
+            id="movies"
+            class="bg-gradient-to-br from-red-500 to-pink-500 rounded-lg p-6 text-white hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">🎬</div>
+            <h3 class="text-xl font-semibold mb-2">Movies</h3>
+            <p class="mb-4">
+              Discover blockbuster hits and indie gems from around the world.
+            </p>
+            <a
+              href="src/Movies/movies.html"
+              class="bg-white text-red-500 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-300"
+              >Browse Movies</a
+            >
+          </div>
+          <!-- Series -->
+          <div
+            id="series"
+            class="bg-gradient-to-br from-green-500 to-teal-500 rounded-lg p-6 text-white hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">📺</div>
+            <h3 class="text-xl font-semibold mb-2">Series</h3>
+            <p class="mb-4">
+              Binge-watch your favorite shows and discover new series.
+            </p>
+            <a
+              href="src/Series/series.html"
+              class="bg-white text-green-500 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-300"
+              >Watch Series</a
+            >
+          </div>
+          <!-- Books -->
+          <div
+            id="books"
+            class="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg p-6 text-white hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">📚</div>
+            <h3 class="text-xl font-semibold mb-2">Books</h3>
+            <p class="mb-4">
+              Dive into captivating stories and expand your knowledge.
+            </p>
+            <a
+              href="src/Books/books.html"
+              class="bg-white text-yellow-500 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-300"
+              >Read Books</a
+            >
+          </div>
+          <!-- Anime -->
+          <div
+            id="anime"
+            class="bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg p-6 text-white hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">🎭</div>
+            <h3 class="text-xl font-semibold mb-2">Anime</h3>
+            <p class="mb-4">
+              Experience the vibrant world of Japanese animation.
+            </p>
+            <a
+              href="src/Anime/anime.html"
+              class="bg-white text-purple-500 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-300"
+              >Watch Anime</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Why Choose Universal Digital Hub?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+            <p class="text-gray-600">
+              Stream and access content instantly with our optimized platform.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Secure & Private</h3>
+            <p class="text-gray-600">
+              Your data and privacy are protected with enterprise-grade
+              security.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-purple-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Curated Content</h3>
+            <p class="text-gray-600">
+              Carefully selected content to ensure quality and enjoyment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Universal Digital Hub</h3>
+            <p class="text-gray-400">
+              Your ultimate destination for digital entertainment and knowledge.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#movies" class="text-gray-400 hover:text-white"
+                  >Movies</a
+                >
+              </li>
+              <li>
+                <a href="#series" class="text-gray-400 hover:text-white"
+                  >Series</a
+                >
+              </li>
+              <li>
+                <a href="#books" class="text-gray-400 hover:text-white"
+                  >Books</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Categories</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#anime" class="text-gray-400 hover:text-white"
+                  >Anime</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="text-gray-400 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Connect</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2026 Universal Digital Hub. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
